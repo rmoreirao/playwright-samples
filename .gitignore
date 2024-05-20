@@ -3,8 +3,9 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-\nplaywright/.auth
-
-playwright/.auth
-playwright/.auth/standarduser.json
-playwright/.auth/visualuser.json
+/playwright/.auth/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+web/tests/cartTest.spec.ts

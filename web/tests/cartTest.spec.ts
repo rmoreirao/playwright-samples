@@ -18,7 +18,8 @@ test.describe('Cart Functionality 1 for standard user', () => {
         await loginPage.verifyLogin();
     })
 
-    test('Add product to cart and checkout', async ({ page }) => { 
+    test('Add product to cart and checkout',{ tag:'@fast'}, async ({ page }) => { 
+        
         // await page.goto('/');       
         await page.getByAltText('Products').isVisible();
         await cartPage.addProductToCart('Sauce Labs Backpack');
@@ -26,13 +27,13 @@ test.describe('Cart Functionality 1 for standard user', () => {
         await cartPage.validateProductsInCart('Sauce Labs Backpack');
         await cartPage.checkout();
     });
-    test('Remove product from cart', async ({ page }) => {
+    test('Remove product from cart',{ tag:'@fast'}, async ({ page }) => {
         await cartPage.addProductToCart('Sauce Labs Backpack');
         await cartPage.clickCart();
         await cartPage.removeProductFromCart('Sauce Labs Backpack');
         await cartPage.validateProductsInCartisNot('Sauce Labs Backpack');
     });
-    test('Continue shopping', async ({ page }) => {
+    test('Continue shopping', { tag:'@fast'}, async ({ page }) => {
         await cartPage.addProductToCart('Sauce Labs Backpack');
         await cartPage.clickCart();
         await cartPage.continueShopping();

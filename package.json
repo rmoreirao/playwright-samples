@@ -1,23 +1,26 @@
 {
-  "name": "playwright-poc-ts",
+  "name": "playwright-ui-poc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anu-01/playwright-poc-ts.git"
+    "url": "git+https://github.com/rmoreirao/playwright-ui-poc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anu-01/playwright-poc-ts/issues"
+    "url": "https://github.com/rmoreirao/playwright-ui-poc/issues"
   },
-  "homepage": "https://github.com/anu-01/playwright-poc-ts#readme",
+  "homepage": "https://github.com/rmoreirao/playwright-ui-poc#readme",
   "devDependencies": {
-    "@playwright/test": "^1.41.2",
+    "@playwright/test": "^1.44.0",
     "@types/node": "^20.10.5",
     "dotenv": "^16.4.3"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0"
   }
 }
