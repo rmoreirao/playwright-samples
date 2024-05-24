@@ -2,7 +2,7 @@ import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
-  console.log('beforeEach');
+  // console.log('Performing beforeEach...');
 });
 
 const TODO_ITEMS = [
