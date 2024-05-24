@@ -21,6 +21,7 @@
     "dotenv": "^16.4.3"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.9.1",
     "playwright": "^1.44.0"
   }
 }
