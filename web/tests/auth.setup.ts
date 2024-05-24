@@ -25,6 +25,7 @@ setup('Create standard user auth', async ({ page }) => {
   // create a delay of 1 second to allow the storage state to be saved
   // await page.waitForTimeout(5000);
   await page.context().storageState({ path: standardauthFile });
+  console.log('Standard user auth saved');
 });
 
 setup('Create visual user auth', async ({ page }) => {
@@ -48,4 +49,5 @@ setup('Create visual user auth', async ({ page }) => {
   // create a delay of 1 second to allow the storage state to be saved
   // await page.waitForTimeout(5000);
   await page.context().storageState({ path: visualauthFile });
+  console.log('Visual user auth saved');
 });
