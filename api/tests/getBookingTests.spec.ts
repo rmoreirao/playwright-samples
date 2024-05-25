@@ -1,4 +1,10 @@
-const { test, expect } = require('@playwright/test');
+// to debug: 
+//    $env:DEBUG="pw:api"
+//    npx playwright test -c .\playwright.api.config.ts
+
+
+import { test, expect } from '@playwright/test';
+
 const baseUri = 'https://restful-booker.herokuapp.com';
 var token
 
@@ -16,7 +22,9 @@ test('should be able to create a booking', async ({ request }) => {
             "additionalneeds": "Breakfast"
         }
     });
+
     console.log(await response.json());
+    console.log(response.headers());
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
