@@ -11,3 +11,4 @@ node_modules/
 web/tests/cartTest.spec.ts
 playwright.service.config.secrets.ps1
 playwright.service.ps1
+playwright.service_test.ps1
