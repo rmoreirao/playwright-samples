@@ -14,16 +14,14 @@ Playwright is a framework for Web Testing and Automation. It allows testing [Chr
 ## Getting Started
 
 ### Pre-requisites
-* Download and install Node.js
-* Download and install visual studio code
+* Follow steps here: https://playwright.dev/docs/intro
 
 ### Setup scripts
-* Clone the repository into a folder
+* Clone the repository
 * Go to Project root directory and install Dependency: `npm install`
 * All the dependencies from package.json would be installed in node_modules folder.
 
-### How to write Test
-* Add new spec under `web/tests` folder
-* Name the file as <testname>.spec.ts (e.g. cart.spec.ts)
-* Create a file for a page under web/pages as <page-name>.ts (e.g. cartPage.ts)
-* Add page objects in the constructor of the class and method implementation for page
+### Running the tests
+* Execute the tests: `npm playwright test`
+* Execute the tests with specific config file: `npm playwright test -c {config filename}` 
+

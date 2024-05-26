@@ -10,3 +10,4 @@ node_modules/
 /playwright/.cache/
 web/tests/cartTest.spec.ts
 playwright.service.config.secrets.ps1
+playwright.service.ps1
