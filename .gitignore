@@ -9,3 +9,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 web/tests/cartTest.spec.ts
+playwright.service.config.secrets.ps1

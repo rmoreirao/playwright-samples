@@ -4,7 +4,7 @@
 */
 
 import { defineConfig } from '@playwright/test';
-import config from './playwright.config.ts';
+import config from './playwright.config';
 import dotenv from 'dotenv';
 
 // Define environment on the dev box in .env file:

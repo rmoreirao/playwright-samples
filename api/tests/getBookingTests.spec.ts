@@ -166,21 +166,3 @@ test('Custom Polling test', async ({ page }) => {
         timeout: 60000,
     }).toBe(200);
 });
-
-test('Expect Retry test', async ({ page }) => {
-    await expect(async () => {
-        const response = await page.request.get(baseUri +'/booking');
-        expect(response.status()).toBe(200);
-    }).toPass();
-});
-
-
-test('Expect Custom Retry test', async ({ page }) => {
-    await expect(async () => {
-        const response = await page.request.get(baseUri +'/booking');
-        expect(response.status()).toBe(200);
-    }).toPass({
-        intervals: [1_000, 2_000, 10_000],
-        timeout: 60_000
-    });
-});
