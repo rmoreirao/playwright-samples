@@ -21,9 +21,9 @@ jobs:
         run: npx playwright test -c playwright.service.config.ts --workers=20
     
       - name: Upload Playwright report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
-          path: path/to/playwright/folder/playwright-report/ # update accordingly
+          path: playwright-report/
           retention-days: 10
