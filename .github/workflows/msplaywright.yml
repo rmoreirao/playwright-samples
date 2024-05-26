@@ -31,7 +31,4 @@ jobs:
           name: playwright-report
           path: ./playwright-report/ # update accordingly
           retention-days: 10
-
-      - name: list files
-        run: ls -R
       
