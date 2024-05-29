@@ -29,6 +29,7 @@ export default class LoginPage extends BasePage {
         await this.loginBtn.click()
     }
     async login(strUser: string, strPwd: string) {
+        console.log('Logging in with username: ' + strUser + ' and password: ' + strPwd + '...')
         await this.enterUsername(strUser)
         await this.enterPassword(strPwd)
         await this.clickLoginBtn();

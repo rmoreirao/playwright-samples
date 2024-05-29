@@ -13,9 +13,10 @@ test.describe('Cart Functionality 1 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout',{ tag:'@fast'}, async ({ page }) => { 
@@ -55,9 +56,9 @@ test.describe('Cart Functionality 2 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout 2', async ({ page }) => { 
@@ -96,9 +97,9 @@ test.describe('Cart Functionality 3 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout 3', async ({ page }) => { 
@@ -137,9 +138,9 @@ test.describe('Cart Functionality 4 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout 4', async ({ page }) => { 
@@ -178,9 +179,9 @@ test.describe('Cart Functionality 5 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout 5', async ({ page }) => { 
@@ -218,9 +219,9 @@ test.describe('Cart Functionality 6 for standard user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(StandardUser.username, StandardUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(StandardUser.username, StandardUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout 6', async ({ page }) => { 
@@ -259,9 +260,9 @@ test.describe('Cart Functionality for visual user', () => {
     test.beforeEach(async ({ page }) => {       
         cartPage = new CartPage(page);
         loginPage = new LoginPage(page);
-        await loginPage.open();
-        await loginPage.login(VisualUser.username, VisualUser.password);
-        await loginPage.verifyLogin();
+        // await loginPage.open();
+        // await loginPage.login(VisualUser.username, VisualUser.password);
+        // await loginPage.verifyLogin();
     })
 
     test('Add product to cart and checkout', async ({ page }) => { 
