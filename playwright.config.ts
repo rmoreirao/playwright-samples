@@ -60,8 +60,8 @@ export default defineConfig({
     // },
     
     // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
+    //   name: 'Mobile Chrome Dark Mode',
+    //   use: { ...devices['Pixel 5'], colorScheme: 'dark' },
     // },
     
 
