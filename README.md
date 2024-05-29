@@ -13,15 +13,17 @@ Playwright is a framework for Web Testing and Automation. It allows testing [Chr
 
 ## Getting Started
 
-### Pre-requisites
+### Playwright Intro
 * Follow steps here: https://playwright.dev/docs/intro
 
-### Setup scripts
-* Clone the repository
-* Go to Project root directory and install Dependency: `npm install`
-* All the dependencies from package.json would be installed in node_modules folder.
-
-### Running the tests
-* Execute the tests: `npm playwright test`
-* Execute the tests with specific config file: `npm playwright test -c {config filename}` 
-
+### Playwright Commands
+* Create project: `npm init playwright@latest`
+* Run the tests: `npm playwright test`
+* Run the tests with specific config file: `npm playwright test -c {config filename}` 
+* Run test with specific browser: `npm playwright test --project=chromium`
+* Run test with Show Browser: `npm playwright test --headed`
+* Run test with debug: `npm playwright test --debug`
+* Run test with trace: `npm playwright test --trace on`
+* Run test in UI Mode: `npm playwright test --ui`
+* Auto generate code: `npm playwright codegen`
+* Show report: `npm playwright show-report`

@@ -5,6 +5,11 @@ test.beforeEach(async ({ page }) => {
   // console.log('Performing beforeEach...');
 });
 
+// test.afterEach(async ({ page }) => {
+//   await page.evaluate(() => localStorage.clear());
+//   console.log('Performing afterEach...');
+// }
+
 const TODO_ITEMS = [
   'buy some cheese',
   'feed the cat',

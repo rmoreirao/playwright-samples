@@ -8,6 +8,7 @@ export abstract class BasePage {
   }
 
   async wait(time: number) {
+    // Debug purpose
     await this.page.waitForTimeout(time)
   }
 }
