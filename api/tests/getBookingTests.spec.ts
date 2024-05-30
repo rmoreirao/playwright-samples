@@ -1,12 +1,15 @@
 // to debug: 
 //    $env:DEBUG="pw:api"
 //    npx playwright test -c .\playwright.api.config.ts
+// If tests are failing, can be because bookings are not available in the system.
+// Check the bookings here: https://restful-booker.herokuapp.com/booking/
 
 
 import { test, expect } from '@playwright/test';
 
-const baseUri = 'https://restful-booker.herokuapp.com';
-var token
+const baseUri = '';
+
+let bookingId: string = '267';
 
 test('should be able to create a booking', async ({ request }) => {
     const response = await request.post(baseUri + "/booking", {
@@ -32,6 +35,7 @@ test('should be able to create a booking', async ({ request }) => {
     expect(responseBody.booking).toHaveProperty("lastname", "Brown");
     expect(responseBody.booking).toHaveProperty("totalprice", 111);
     expect(responseBody.booking).toHaveProperty("depositpaid", true);
+    bookingId = responseBody.bookingid;
 });
 
 const bookingDetails = require('../testdata/booking-details.json');
@@ -59,7 +63,7 @@ test('should be get all the booking details', async ({ request }) => {
 });
 
 test('should be get specific booking details', async ({ request }) => {
-    const response = await request.get(baseUri +'/booking/1');
+    const response = await request.get(baseUri + `/booking/${bookingId}`);
     console.log(await response.json());
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
@@ -90,11 +94,11 @@ test('should be able to update the booking details', async ({ request }) => {
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    token = responseBody.token;
+    const token = responseBody.token;
     console.log("New Token is: " + token);
 
  // PUT
-    const updateRequest = await request.put(baseUri +'/booking/1', {
+    const updateRequest = await request.put(baseUri +`/booking/${bookingId}`, {
         headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -135,11 +139,11 @@ test('should be able to delete the booking details', async ({ request }) => {
     expect(response.ok()).toBeTruthy();
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    token = responseBody.token;
+    const token = responseBody.token;
     console.log("New Token is: " + token);
 
     // DELETE
-    const deleteRequest = await request.delete(baseUri +'/booking/7', {
+    const deleteRequest = await request.delete(baseUri +`/booking/${bookingId}`, {
         headers: {
         'Content-Type': 'application/json',
         'Cookie': `token=${token}`,

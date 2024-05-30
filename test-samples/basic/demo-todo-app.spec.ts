@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 // test.afterEach(async ({ page }) => {
 //   await page.evaluate(() => localStorage.clear());
 //   console.log('Performing afterEach...');
-// }
+// });
 
 const TODO_ITEMS = [
   'buy some cheese',

@@ -45,6 +45,7 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox']
       // , video: 'on' 
+      , colorScheme: 'dark'
     },
     },
 
@@ -61,7 +62,7 @@ export default defineConfig({
     
     // {
     //   name: 'Mobile Chrome Dark Mode',
-    //   use: { ...devices['Pixel 5'], colorScheme: 'dark' },
+    //   use: { ...devices['Pixel 5'], colorScheme: 'dark'} ,
     // },
     
 
