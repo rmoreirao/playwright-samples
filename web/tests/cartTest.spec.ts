@@ -59,6 +59,7 @@ test.describe('Cart Functionality 2 for standard user', () => {
         // await loginPage.open();
         // await loginPage.login(StandardUser.username, StandardUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout 2', async ({ page }) => { 
@@ -100,6 +101,7 @@ test.describe('Cart Functionality 3 for standard user', () => {
         // await loginPage.open();
         // await loginPage.login(StandardUser.username, StandardUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout 3', async ({ page }) => { 
@@ -141,6 +143,7 @@ test.describe('Cart Functionality 4 for standard user', () => {
         // await loginPage.open();
         // await loginPage.login(StandardUser.username, StandardUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout 4', async ({ page }) => { 
@@ -182,6 +185,7 @@ test.describe('Cart Functionality 5 for standard user', () => {
         // await loginPage.open();
         // await loginPage.login(StandardUser.username, StandardUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout 5', async ({ page }) => { 
@@ -222,6 +226,7 @@ test.describe('Cart Functionality 6 for standard user', () => {
         // await loginPage.open();
         // await loginPage.login(StandardUser.username, StandardUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout 6', async ({ page }) => { 
@@ -263,6 +268,7 @@ test.describe('Cart Functionality for visual user', () => {
         // await loginPage.open();
         // await loginPage.login(VisualUser.username, VisualUser.password);
         // await loginPage.verifyLogin();
+        await cartPage.open();
     })
 
     test('Add product to cart and checkout', async ({ page }) => { 
