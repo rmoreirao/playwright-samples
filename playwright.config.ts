@@ -29,9 +29,9 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
 
-    // launchOptions:{
-    //   slowMo: 1_000
-    // }
+    // launchOptions: {
+    //   slowMo: 1_000,
+    // },
   },
 
   /* Configure projects for major browsers */
@@ -45,8 +45,7 @@ export default defineConfig({
       name: "firefox",
       use: {
         ...devices["Desktop Firefox"],
-        // , video: 'on'
-        // , colorScheme: 'dark'
+        colorScheme: "dark",
       },
     },
 
@@ -74,6 +73,21 @@ export default defineConfig({
     // {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    // },
+
+    // {
+    //   name: "firefox video on",
+    //   use: {
+    //     ...devices["Desktop Firefox"],
+    //     video: {
+    //       mode: "on",
+    //       size: { width: 640, height: 480 },
+    //     },
+    //     colorScheme: "dark",
+    //     launchOptions: {
+    //       slowMo: 1_000,
+    //     },
+    //   },
     // },
   ],
 
