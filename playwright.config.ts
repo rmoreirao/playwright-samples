@@ -31,12 +31,11 @@ export default defineConfig({
 
     video: "retain-on-failure",
 
-    screenshot:'on'
+    screenshot:'on',
 
     // launchOptions: {
     //   slowMo: 1_000,
     // },
-    
   },
 
   /* Configure projects for major browsers */

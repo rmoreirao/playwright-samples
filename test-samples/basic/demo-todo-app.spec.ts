@@ -1,4 +1,4 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect, type Page , defineConfig } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
@@ -15,6 +15,12 @@ const TODO_ITEMS = [
   'feed the cat',
   'book a doctors appointment'
 ];
+
+export default defineConfig({
+  expect: {
+    timeout: 4 * 1000,
+  },
+});
 
 
 test.describe('New Todo', () => {
