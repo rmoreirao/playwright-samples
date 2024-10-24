@@ -18,5 +18,5 @@ test('get started link', async ({ page }) => {
   // await page.pause();
 
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-  // await page.screenshot({ path: 'screenshot.png', fullPage: true });
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
 });

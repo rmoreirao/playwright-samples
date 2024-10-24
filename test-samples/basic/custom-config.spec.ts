@@ -4,7 +4,7 @@ import { test, expect, type Page } from '@playwright/test';
 
 test.use(
   { launchOptions: { 
-    slowMo: 1_000,
+    // slowMo: 1_000,
     // headless: false
    } 
   }
