@@ -18,12 +18,12 @@ Playwright is a framework for Web Testing and Automation. It allows testing [Chr
 
 ### Playwright Commands
 * Create project: `npm init playwright@latest`
-* Run the tests: `npm playwright test`
-* Run the tests with specific config file: `npm playwright test -c {config filename}` 
-* Run test with specific browser: `npm playwright test --project=chromium`
-* Run test with Show Browser: `npm playwright test --headed`
-* Run test with debug: `npm playwright test --debug`
-* Run test with trace: `npm playwright test --trace on`
-* Run test in UI Mode: `npm playwright test --ui`
-* Auto generate code: `npm playwright codegen`
-* Show report: `npm playwright show-report`
+* Run the tests: `npx playwright test`
+* Run the tests with specific config file: `npx playwright test -c {config filename}` 
+* Run test with specific browser: `npx playwright test --project=chromium`
+* Run test with Show Browser: `npx playwright test --headed`
+* Run test with debug: `npx playwright test --debug`
+* Run test with trace: `npx playwright test --trace on`
+* Run test in UI Mode: `npx playwright test --ui`
+* Auto generate code: `npx playwright codegen`
+* Show report: `npx playwright show-report`
