@@ -16,6 +16,9 @@ Playwright is a framework for Web Testing and Automation. It allows testing [Chr
 ### Playwright Intro
 * Follow steps here: https://playwright.dev/docs/intro
 
+### To run this locally
+* Install Playwright using npm: `npm install -D @playwright/test`
+
 ### Playwright Commands
 * Create project: `npm init playwright@latest`
 * Run the tests: `npx playwright test`
