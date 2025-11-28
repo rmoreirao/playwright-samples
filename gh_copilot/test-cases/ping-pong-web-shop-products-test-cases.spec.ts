@@ -36,9 +36,11 @@ test.describe('Ping Pong Web Shop - Products Page', () => {
       await expect(page).toHaveURL(/cart\.html/);
 
       // Verify cart shows "Butterfly Tenergy 05 - $89.99 x 1"
-      await expect(page.getByText('Butterfly Tenergy 05')).toBeVisible();
-      await expect(page.getByText('$89.99')).toBeVisible();
-      await expect(page.getByText(/x\s*1|×\s*1/)).toBeVisible();
+      // Find cart item container containing the product
+      const cartItem = page.getByRole('listitem').filter({ hasText: 'Butterfly Tenergy 05' });
+      await expect(cartItem).toContainText('Butterfly Tenergy 05');
+      await expect(cartItem).toContainText('$89.99');
+      await expect(cartItem).toContainText(/x\s*1|×\s*1/);
     });
   });
 });
