@@ -50,16 +50,25 @@ Use Playwright MCP Server tools to navigate to the URL defined on the test case 
 The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-test-cases.spec.ts".
 ```
 
-### IMPLEMENT - Create Tests from Instructions - Copilot Agent with Custom Agent
+### IMPLEMENT - Create Tests from Instructions - Copilot Coding Agent with Custom Agent
 
-Prompt:
+Prompt - !!Do it from the GitHub WebSite!!:
 ```
 Implement Playwright EXP-006 test cases from file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md.
 Use Playwright MCP Server tools to navigate to the URL defined on the test case specification and implement the test steps as described.
 The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-products-test-cases.spec.ts".
 ```
 
-### HEAL - Debug current bugs and fix code!
+### HEAL - Debug current bugs and fix code
+
+Break one test case and then prompt Copilot to fix it:
+```
+Debug and fix the failing test case EXP-002 from file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md.
+The test case is implemented on file #file:gh_copilot\test-cases\ping-pong-web-shop-test-cases.spec.ts.
+Use Playwright MCP Server tools to navigate to the URL defined on the test case specification and identify the issue on the test implementation.
+Fix the test case implementation to ensure it passes successfully.
+```
+
 
 ### Custom Prompt for Creating Playwright Tests
 

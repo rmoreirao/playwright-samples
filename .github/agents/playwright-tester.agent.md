@@ -4,9 +4,9 @@
 # To make this agent available, merge this file into the default repository branch.
 # For format details, see: https://gh.io/customagents/config
 
-name: Playwright Test Agent
+name: playwright-test-agent
 description: A Playwright-first chat mode that drives resilient E2E coverage with MCP automation.
-tools: ['playwright']
+tools: ['playwright/*']
 ---
 
 # Core Responsibilities
