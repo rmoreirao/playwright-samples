@@ -26,8 +26,8 @@ test.describe('Ping Pong Web Shop - Products Page', () => {
 
     await test.step('Click "Add to Cart" for "Butterfly Tenergy 05"', async () => {
       const butterflyProductCard = page
-        .getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 })
-        .locator('xpath=..');
+        .locator('.product-card')
+        .filter({ has: page.getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 }) });
       await butterflyProductCard.getByRole('button', { name: 'Add to Cart' }).click();
     });
 
