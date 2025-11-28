@@ -34,31 +34,33 @@
 ### GitHub Copilot Custom Instructions for Playwright
 1) Check file: .github\instructions\playwright.instructions.md
 
-### Explore the WebSite and suggest Test Scenarios from Navigation
+### PLAN - Explore the WebSite and suggest Test Scenarios from Navigation
 
 Use the Playwright MCP Server tools to explore the WebSite and suggest Test Scenarios based on the navigation and interactions performed.
 Example:
     - **Prompt file**: .github/prompts/exploratory_test_cases_creation.prompt.md
     - **Execute on GH Copilot Agent Mode**: /exploratory_test_cases_creation website_url: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html
 
-### Create Tests from Instructions
+### IMPLEMENT - Create Tests from Instructions - Agent Mode Locally
 
-Prompt - Agent Mode:
+Prompt:
 ```
-Implement Playwright EXP-001 and EXP-002 test cases from file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md.
+Implement Playwright EXP-001 test cases from file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md.
 Use Playwright MCP Server tools to navigate to the URL defined on the test case specification and implement the test steps as described.
-The test cases must be implemented under the "gh_copilot\ping-pong-web-shop-test-cases" folder in a single file named "ping-pong-web-shop-test-cases.spec.ts".
+The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-test-cases.spec.ts".
 ```
 
-### Make sure that tests passes successfully
+### IMPLEMENT - Create Tests from Instructions - Copilot Agent with Custom Agent
 
-### Create User Guides
+Prompt:
+```
+Implement Playwright EXP-006 test cases from file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md.
+Use Playwright MCP Server tools to navigate to the URL defined on the test case specification and implement the test steps as described.
+The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-products-test-cases.spec.ts".
+```
 
-### Debug current bugs and fix code!
-
-
-
-
-
+### HEAL - Debug current bugs and fix code!
 
 ### Custom Prompt for Creating Playwright Tests
+
+### Create User Guides
