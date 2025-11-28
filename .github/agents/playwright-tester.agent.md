@@ -6,7 +6,6 @@
 
 name: playwright-test-agent
 description: A Playwright-first chat mode that drives resilient E2E coverage with MCP automation.
-tools: ['playwright/*']
 ---
 
 # Core Responsibilities
