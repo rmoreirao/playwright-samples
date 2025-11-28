@@ -13,34 +13,35 @@ test.describe('Ping Pong Web Shop - Products Page', () => {
    * Test Type: Functional
    */
   test('EXP-006: Adding a product to cart should create a new cart entry with quantity 1', async ({ page }) => {
-    await test.step('Navigate to Products page with empty cart', async () => {
+    await test.step('Reset cart state and open Products page', async () => {
+      await page.goto(`${BASE_URL}/index.html`);
+      await page.evaluate(() => {
+        localStorage.clear();
+        sessionStorage.clear();
+      });
       await page.goto(`${BASE_URL}/pages/products.html?cat=all`);
       await expect(page).toHaveTitle('Products - Ping Pong Shop');
       await expect(page.getByRole('heading', { name: 'Products', level: 1 })).toBeVisible();
     });
 
     await test.step('Click "Add to Cart" for "Butterfly Tenergy 05"', async () => {
-      const butterflyProduct = page.getByRole('article').filter({ hasText: 'Butterfly Tenergy 05' });
-      const addToCartButton = butterflyProduct.getByRole('button', { name: 'Add to Cart' });
-      await addToCartButton.click();
+      const butterflyProductCard = page
+        .getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 })
+        .locator('xpath=..');
+      await butterflyProductCard.getByRole('button', { name: 'Add to Cart' }).click();
     });
 
     await test.step('Verify success notification appears', async () => {
-      const notification = page.getByRole('alert');
-      await expect(notification).toContainText(/added|cart/i);
+      const notification = page.getByText('Butterfly Tenergy 05 added to cart');
+      await expect(notification).toBeVisible();
     });
 
     await test.step('Navigate to Cart and verify item', async () => {
-      const cartLink = page.getByRole('link', { name: /cart/i });
-      await cartLink.click();
+      await page.getByRole('link', { name: /cart/i }).click();
       await expect(page).toHaveURL(/cart\.html/);
 
-      // Verify cart shows "Butterfly Tenergy 05 - $89.99 x 1"
-      // Find cart item container containing the product
-      const cartItem = page.getByRole('listitem').filter({ hasText: 'Butterfly Tenergy 05' });
-      await expect(cartItem).toContainText('Butterfly Tenergy 05');
-      await expect(cartItem).toContainText('$89.99');
-      await expect(cartItem).toContainText(/x\s*1|×\s*1/);
+      const cartContents = page.getByRole('main').getByText('Butterfly Tenergy 05 - $89.99 x 1');
+      await expect(cartContents).toBeVisible();
     });
   });
 });
