@@ -32,7 +32,8 @@
 3) Enable / Disable specific tools (GH Copilot)
 
 ### GitHub Copilot Custom Instructions for Playwright
-1) Check file: .github\instructions\playwright.instructions.md
+- **Sample file**: .github\instructions\playwright.instructions.md
+- **More Inspiration**: https://github.com/github/awesome-copilot
 
 ### PLAN - Explore the WebSite and suggest Test Scenarios from Navigation
 
