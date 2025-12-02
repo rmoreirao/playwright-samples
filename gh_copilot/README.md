@@ -94,7 +94,19 @@ Fix the test case implementation to ensure it passes successfully.
 Docs: https://playwright.dev/docs/test-agents
 On VS Code execute: ```npx playwright init-agents --loop=vscode```
 
-
+Sample Prompts for Playwright Agents:
+**Planner**: 
+```
+Explore the web application at URL: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html and create a comprehensive test plan for basic operations.
+```
+**Generator**:
+```
+Generate the tests for the '#### 1'
+```
+**Healer**:
+```
+Fix the failing test case for '#### 1'
+```
 
 ### FEELING Creative?? Other Ideas
 - Create Performance Tests using Playwright MCP Server tools
@@ -104,4 +116,4 @@ On VS Code execute: ```npx playwright init-agents --loop=vscode```
 - Validate the Documentation using Playwright MCP Server tools
 - Validate User Journeys using Playwright MCP Server tools
 - Automatically create Bug Reports using Playwright MCP Server tools + GitHub MCP
-...
+- ...
