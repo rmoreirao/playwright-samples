@@ -46,10 +46,20 @@ Example:
 1) Use the Playwright MCP Server tools to explore the WebSite:
 Example:
     - **Prompt file**: .github/prompts/playwright-manual-test-report.prompt.md
+    - **Sample Prompt**:
+    ```
+    Manually test and explore the web application at URL: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html.
+    Focus on key user flows.
+    ```
+
 
 2) Based on the exploration report, create a comprehensive manual test plan:
 Example:
     - **Prompt file**: .github/prompts/playwright-manual-test-plan.prompt.md
+    - **Sample Prompt**:
+    ```
+    Create a comprehensive manual test plan for the web application based on the exploration report.
+    ```
 
 ### IMPLEMENT - Create Tests from Instructions - Agent Mode Locally
 
@@ -78,6 +88,13 @@ The test case is implemented on file #file:gh_copilot\test-cases\ping-pong-web-s
 Use Playwright MCP Server tools to navigate to the URL defined on the test case specification and identify the issue on the test implementation.
 Fix the test case implementation to ensure it passes successfully.
 ```
+
+### PLAN, GENERATE and HEAL - Playwright Agents
+
+Docs: https://playwright.dev/docs/test-agents
+On VS Code execute: ```npx playwright init-agents --loop=vscode```
+
+
 
 ### FEELING Creative?? Other Ideas
 - Create Performance Tests using Playwright MCP Server tools
