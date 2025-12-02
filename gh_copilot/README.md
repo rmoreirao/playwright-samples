@@ -61,7 +61,7 @@ Example:
     Create a comprehensive manual test plan for the web application based on the exploration report.
     ```
 
-### IMPLEMENT - Create Tests from Instructions - Agent Mode Locally
+### GENERATE - Create Tests from Instructions - Agent Mode Locally
 
 Prompt:
 ```
@@ -70,7 +70,7 @@ Use Playwright MCP Server tools to navigate to the URL defined on the test case 
 The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-test-cases.spec.ts".
 ```
 
-### IMPLEMENT - Create Tests from Instructions - Copilot Coding Agent with Custom Agent + Running Tests after Implementing it!
+### GENERATE - Create Tests from Instructions - Copilot Coding Agent with Custom Agent + Running Tests after Implementing it!
 
 Prompt - !!Do it from the GitHub WebSite!!:
 ```
