@@ -41,6 +41,16 @@ Example:
     - **Prompt file**: .github/prompts/exploratory_test_cases_creation.prompt.md
     - **Execute on GH Copilot Agent Mode**: /exploratory_test_cases_creation website_url: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html
 
+### PLAN - EXPLORE & TEST PLAN - Create Manual Test Plan from Exploration
+
+1) Use the Playwright MCP Server tools to explore the WebSite:
+Example:
+    - **Prompt file**: .github/prompts/playwright-manual-test-report.prompt.md
+
+2) Based on the exploration report, create a comprehensive manual test plan:
+Example:
+    - **Prompt file**: .github/prompts/playwright-manual-test-plan.prompt.md
+
 ### IMPLEMENT - Create Tests from Instructions - Agent Mode Locally
 
 Prompt:
@@ -50,7 +60,7 @@ Use Playwright MCP Server tools to navigate to the URL defined on the test case 
 The test cases must be implemented under the "gh_copilot\test-cases" folder in a single file named "ping-pong-web-shop-test-cases.spec.ts".
 ```
 
-### IMPLEMENT - Create Tests from Instructions - Copilot Coding Agent with Custom Agent
+### IMPLEMENT - Create Tests from Instructions - Copilot Coding Agent with Custom Agent + Running Tests after Implementing it!
 
 Prompt - !!Do it from the GitHub WebSite!!:
 ```
@@ -69,7 +79,12 @@ Use Playwright MCP Server tools to navigate to the URL defined on the test case 
 Fix the test case implementation to ensure it passes successfully.
 ```
 
-
-### Custom Prompt for Creating Playwright Tests
-
-### Create User Guides
+### FEELING Creative?? Other Ideas
+- Create Performance Tests using Playwright MCP Server tools
+- Create Accessibility & Security Tests using Playwright MCP Server tools
+- Create Visual Regression Tests using Playwright MCP Server tools
+- Create User Manuals using Playwright MCP Server tools
+- Validate the Documentation using Playwright MCP Server tools
+- Validate User Journeys using Playwright MCP Server tools
+- Automatically create Bug Reports using Playwright MCP Server tools + GitHub MCP
+...

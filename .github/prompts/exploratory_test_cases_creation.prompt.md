@@ -20,6 +20,23 @@ Utilize Playwright MCP Server tools to navigate through the application, interac
 3. **Cross-Feature Testing**: Validate interactions between different features
 4. **State Management**: Test various application states and transitions
 
+## Test Exploration Report
+
+1. Navigate to the url provided by the user and perform the described interactions. If no url is provided, ask the user to provide one.
+2. Observe and verify the expected behavior, focusing on accessibility, UI structure, and user experience.
+3. Report back in clear, natural language:
+   - What steps you performed (navigation, interactions, assertions).
+   - What you observed (outcomes, UI changes, accessibility results).
+   - Any issues, unexpected behaviors, or accessibility concerns found.
+4. Reference URLs, element roles, and relevant details to support your findings.
+
+Example report format:
+- **Scenario:** [Brief description]
+- **Steps Taken:** [List of actions performed]
+- **Outcome:** [What happened, including any assertions or accessibility checks]
+- **Issues Found:** [List any problems or unexpected results]
+
+
 ## Test Case Documentation Format
 
 For each identified test case, document the following:
