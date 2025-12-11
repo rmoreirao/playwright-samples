@@ -8,6 +8,7 @@ import { test, expect } from '@playwright/test';
  */
 test.describe('Ping Pong Web Shop - Cart Page Notifications', () => {
   const BASE_URL = 'https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop';
+  const NOTIFICATION_SELECTOR = '.notification, [role="alert"], [class*="notification"], [class*="alert"], [class*="message"]';
 
   test.beforeEach(async ({ page }) => {
     // Reset cart state before each test
@@ -29,9 +30,8 @@ test.describe('Ping Pong Web Shop - Cart Page Notifications', () => {
       await expect(page).toHaveTitle('Products - Ping Pong Shop');
 
       // Add Butterfly Tenergy 05 to cart
-      const butterflyProductCard = page
-        .getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 })
-        .locator('xpath=..');
+      const butterflyHeading = page.getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 });
+      const butterflyProductCard = butterflyHeading.locator('..');
       await butterflyProductCard.getByRole('button', { name: 'Add to Cart' }).click();
 
       // Verify notification appears
@@ -56,7 +56,7 @@ test.describe('Ping Pong Web Shop - Cart Page Notifications', () => {
       await removeButton.click();
 
       // Verify removal notification appears
-      const removalNotification = page.locator('.notification, [role="alert"], [class*="notification"], [class*="alert"], [class*="message"]').filter({ hasText: /removed|deleted/i });
+      const removalNotification = page.locator(NOTIFICATION_SELECTOR).filter({ hasText: /removed|deleted/i });
       await expect(removalNotification.first()).toBeVisible({ timeout: 5000 });
     });
 
@@ -68,7 +68,7 @@ test.describe('Ping Pong Web Shop - Cart Page Notifications', () => {
 
     await test.step('Verify notification is removed', async () => {
       // Verify notification is no longer visible
-      const notification = page.locator('.notification, [role="alert"], [class*="notification"], [class*="alert"], [class*="message"]');
+      const notification = page.locator(NOTIFICATION_SELECTOR);
       await expect(notification).toHaveCount(0);
     });
 
@@ -89,9 +89,8 @@ test.describe('Ping Pong Web Shop - Cart Page Notifications', () => {
       await expect(page).toHaveTitle('Products - Ping Pong Shop');
 
       // Add Butterfly Tenergy 05 to cart
-      const butterflyProductCard = page
-        .getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 })
-        .locator('xpath=..');
+      const butterflyHeading = page.getByRole('heading', { name: 'Butterfly Tenergy 05', level: 3 });
+      const butterflyProductCard = butterflyHeading.locator('..');
       await butterflyProductCard.getByRole('button', { name: 'Add to Cart' }).click();
 
       // Verify notification appears
