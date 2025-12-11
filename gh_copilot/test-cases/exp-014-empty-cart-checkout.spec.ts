@@ -6,6 +6,7 @@ import { test, expect } from '@playwright/test';
  */
 test.describe('Ping Pong Web Shop - Cart Page - Empty Cart Checkout', () => {
   const BASE_URL = 'https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop';
+  const NOTIFICATION_TIMEOUT = 2000;
 
   /**
    * EXP-014: Verify checkout is blocked when cart is empty
@@ -55,41 +56,14 @@ test.describe('Ping Pong Web Shop - Cart Page - Empty Cart Checkout', () => {
       // BUG: Currently the app shows a success message even with empty cart
       // This test checks that NO success message appears - it should FAIL because of the bug
       
-      // Wait for any potential notifications to appear after checkout click
-      await page.waitForTimeout(2000);
-      
-      // Take a screenshot to see what's happening
-      await page.screenshot({ path: '/tmp/exp-014-after-checkout.png', fullPage: true });
-      
-      // Get the page HTML for debugging
-      const bodyText = await page.locator('body').textContent();
-      console.log('Page content after checkout:', bodyText?.substring(0, 500));
-      
-      // Check for success message in various forms
-      // The bug is that a success message IS shown when it shouldn't be
-      const successPatterns = [
-        page.getByText(/order.*success/i),
-        page.getByText(/checkout.*success/i),
-        page.getByText(/payment.*success/i),
-        page.getByText(/successfully.*placed/i),
-        page.getByText(/thank.*you/i),
-        page.getByText(/success/i),
-      ];
-      
-      // Check each pattern
-      for (const pattern of successPatterns) {
-        const isVisible = await pattern.isVisible().catch(() => false);
-        if (isVisible) {
-          const text = await pattern.textContent();
-          console.log('Found success message:', text);
-        }
-      }
+      // Wait for page to be fully loaded and any notifications to appear
+      await page.waitForLoadState('networkidle');
       
       // Primary assertion: NO success message should be shown
       // This will FAIL if the bug exists (success message is shown)
-      const anySuccessMessage = page.locator('text=/success|successfully|order.*placed|thank.*you/i');
+      const anySuccessMessage = page.locator('text=/success|successfully|order.*placed|thank.*you|payment.*processed/i');
       await expect(anySuccessMessage.first()).not.toBeVisible({
-        timeout: 2000
+        timeout: NOTIFICATION_TIMEOUT
       });
       
       // Secondary verification: should not navigate away from cart page
