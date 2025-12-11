@@ -1,7 +1,7 @@
 ---
 agent: agent
 description: 'Create comprehensive test cases through systematic application exploration using Playwright MCP Server tools.'
-tools: ['playwright/*']
+tools: ['playwright-mcp/*']
 ---
 
 ## Objective
@@ -11,8 +11,10 @@ Systematically explore the web application using Playwright MCP Server tools to 
 - URL: ${input:website_url}
 
 ## Execution Directives (Agent MUST perform)
-Utilize Playwright MCP Server tools to navigate through the application, interact with UI elements, and explore various user flows. Focus on uncovering potential issues and edge cases that may not be covered by existing test cases.
-!!! Don't assume any prior knowledge of the application. Explore as a new user would with the MCP Server tools !!!
+- Utilize Playwright MCP Server tools to navigate through the application, interact with UI elements, and explore various user flows. Focus on uncovering potential issues and edge cases that may not be covered by existing test cases.
+- Don't take screenshots.
+- !!! Don't assume any prior knowledge of the application. Explore as a new user would with the MCP Server tools !!!
+
 
 ## Exploration Strategy
 1. **Initial Reconnaissance**: Map the application's main features, navigation flow, and user journeys
