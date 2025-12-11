@@ -158,9 +158,9 @@ Fix the failing test case for '#### 1'
 
 </details>
 
-## FEELING Creative?? Other Ideas
+## FEELING Creative??
 <details>
-<summary>Instructions</summary>
+<summary>Other Ideas</summary>
 
 
 - Create Performance Tests using Playwright MCP Server tools
