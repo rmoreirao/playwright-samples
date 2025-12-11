@@ -1,11 +1,25 @@
 # Using Playwright MCP Server with GitHub Copilot
 
+## Setting the Scene for the this Sample
+- We are creating the test cases from this Repository, which does not have access to the code of the WebSite under test.
+- The WebSite under test is a simple Ping Pong Web Shop: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html
+- The test cases will be created by exploring the WebSite using Playwright MCP Server tools.
+
 ## Install Playwright MCP Server on VS Code
+
+<details>
+<summary>Instructions</summary>
+
 - Docs: https://github.com/microsoft/playwright-mcp
 - File: /.vscode/mcp.json
 1) Start MCP Server
 
+</details>
+
 ## Inspect MCP Server with MCP Inspector
+
+<details>
+<summary>Instructions</summary>
 
 1) Execute: `npx @modelcontextprotocol/inspector`
 2) Open url
@@ -23,24 +37,35 @@
     - **Includes metadata**: Element types (button, link), cursor styles, URLs, and text content
     - **Actionable**: The `ref` identifiers can be used by other MCP tools to click, type, or interact with specific elements
 
+</details>
+
 ## Using GitHub Copilot with Playwright MCP Server
+
+<details>
+<summary>Instructions</summary>
 
 1) Select "Agent" mode in GitHub Copilot
 2) Configure Tools
 3) Enable / Disable specific tools (GH Copilot)
 4) Using GH Copilot: ```Navigate to "https://playwright.dev" and click on the "Get Started" link using Playwright MCP Server tools.```
 
-## Setting the Scene for the this Sample
-- We are creating the test cases from this Repository, which does not have access to the code of the WebSite under test.
-- The WebSite under test is a simple Ping Pong Web Shop: https://rmoreirao.github.io/GHCopilotAgentPingPongWebShop/index.html
-- The test cases will be created by exploring the WebSite using Playwright MCP Server tools and
+</details>
 
 ## GitHub Copilot Custom Instructions for Playwright
+
+<details>
+<summary>Instructions</summary>
+
 - **Docs**: https://code.visualstudio.com/docs/copilot/customization/custom-instructions and https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions
 - **Sample file**: .github\instructions\playwright.instructions.md
 - **More Inspiration**: https://github.com/github/awesome-copilot
 
+</details>
+
 ## PLAN - Explore the WebSite and suggest Test Scenarios from Navigation
+
+<details>
+<summary>Instructions</summary>
 
 Use the Playwright MCP Server tools to explore the WebSite and suggest Test Scenarios based on the navigation and interactions performed.
 Example:
@@ -54,7 +79,12 @@ Prompt:
 Create Github issues using the GitHub MCP Server tools for the following test cases "## Cart Page" section in file #file:gh_copilot\PING_PONG_WEBSHOP_TEST_CASES.md
 ```
 
+</details>
+
 ### GENERATE - Create Tests from Instructions - Agent Mode Locally
+
+<details>
+<summary>Instructions</summary>
 
 Prompt:
 ```
@@ -65,7 +95,13 @@ Run the Playwright tests after implementing it and report back the results.
 Custom Instructions on #file:.github\instructions\playwright.instructions.md
 ```
 
+</details>
+
 ### GENERATE - Create Tests from Instructions - Copilot Coding Agent with Custom Agent + Running Tests after Implementing it!
+
+<details>
+<summary>Instructions</summary>
+
 
 Prompt - !!Do it from the GitHub WebSite!!:
 ```
@@ -78,7 +114,13 @@ Run the Playwright tests after implementing it and report back the results.
 Custom Instructions on #file:.github\instructions\playwright.instructions.md
 ```
 
+</details>
+
 ### HEAL - Debug current bugs and fix code
+
+<details>
+<summary>Instructions</summary>
+
 
 Break one test case and then prompt Copilot to fix it:
 ```
@@ -89,7 +131,13 @@ Fix the test case implementation to ensure it passes successfully.
 Custom Instructions on #file:.github\instructions\playwright.instructions.md
 ```
 
+</details>
+
 ### PLAN, GENERATE and HEAL - Playwright Agents
+
+<details>
+<summary>Instructions</summary>
+
 
 Docs: https://playwright.dev/docs/test-agents
 On VS Code execute: ```npx playwright init-agents --loop=vscode```
@@ -108,7 +156,13 @@ Generate the tests for the '#### 1'
 Fix the failing test case for '#### 1'
 ```
 
-### FEELING Creative?? Other Ideas
+</details>
+
+## FEELING Creative?? Other Ideas
+<details>
+<summary>Instructions</summary>
+
+
 - Create Performance Tests using Playwright MCP Server tools
 - Create Accessibility & Security Tests using Playwright MCP Server tools
 - Create Visual Regression Tests using Playwright MCP Server tools
@@ -117,3 +171,5 @@ Fix the failing test case for '#### 1'
 - Validate User Journeys using Playwright MCP Server tools
 - Automatically create Bug Reports using Playwright MCP Server tools + GitHub MCP
 - ...
+
+</details>
